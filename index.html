@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
-<body>
 
+<body>
+    <div class="container">
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+        <section class="tools-board">
+            <div class="row">
+                <label class="title">Shakllar</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M2 20V4h20v16zm2-2h16V6H4zm0 0V6z" />
+                        </svg>
+
+                        <span>To'rtburchak</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 2L1 21h22M12 6l7.53 13H4.47" />
+                        </svg>
+
+                        <span>Uchburchak</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8" />
+                        </svg>
+
+                        <span>Aylana</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-shape" />
+                        <label for="fill-shape">Rangni to'ldirish</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <label class="title">Variantlar</label>
+                <ul class="options">
+                    <li class="option tool active" id="brush">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 21q-1.125 0-2.225-.55T2 19q.65 0 1.325-.513T4 17q0-1.25.875-2.125T7 14t2.125.875T10 17q0 1.65-1.175 2.825T6 21m0-2q.825 0 1.412-.587T8 17q0-.425-.288-.712T7 16t-.712.288T6 17q0 .575-.137 1.05t-.363.9q.125.05.25.05zm5.75-4L9 12.25l8.95-8.95q.275-.275.688-.288t.712.288l1.35 1.35q.3.3.3.7t-.3.7zM7 17"/></svg>
+
+                        <span>Cho'tka</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17.25 18H22v2h-6.75zm-12.5 2l-2.125-2.125q-.575-.575-.587-1.425T2.6 15l11-11.4q.575-.6 1.413-.6t1.412.575L21.4 8.55q.575.575.575 1.425T21.4 11.4L13 20zm7.4-2L20 9.95L15.05 5L4 16.4L5.6 18zM12 12"/></svg>
+
+                        <span>O'chirg'ich</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors">
+                <label for="title">Ranglar</label>
+                <ul class="options">
+                    <li class="options"></li>
+                    <li class="options"></li>
+                    <li class="options"></li>
+                    <li class="options"></li>
+                    <li class="options">
+                        <input type="color" id="color-picker" value="#2a2547">
+                    </li>
+                </ul>
+            </div>
+            <div class="row buttons">
+                <button class="clear-canvas">O'chirish</button>
+                <button class="save-canvas">Saqlash</button>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

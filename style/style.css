@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0ea784;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 10px;
+    padding: 20px;
+}
+
+section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 600px;
+}
+
+.drawing-board {
+    flex: 5;
+}
+
+.tools-board {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.row .options{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+
+.row .options .option{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.option:is(:hover, .active){
+    color: #0ea784;
+}
+
+.option :where(span, label){
+    padding-left: 10px;
+}
+
+.colors .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.colors .option {
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.colors .option:nth-child(1) {
+    background: black;
+}
+
+.colors .option:nth-child(2) {
+    background: blue;
+}
+
+.colors .option:nth-child(3) {
+    background: red;
+}
+
+.colors .option:nth-child(4) {
+    background: green;
+}
+
+.colors .option.selected::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    background: inherit;
+    border-radius: inherit;
+    transform: translate(-48%, -48%);
+    top: 50%;
+    left: 50%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.clear-canvas {
+    background: #999;
+    color: #fff;
+}
+
+.save-canvas {
+    background: #0ea784;
+    color: #fff;
+}
+
+.buttons button:hover {
+    opacity: 0.8;
+}
